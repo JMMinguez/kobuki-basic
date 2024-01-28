@@ -8,9 +8,14 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
 
 1. ¿Has tenido que hacer algún setup en tu ordenador? Indica los pasos
    
-   [Respuesta]
+   He tenido que incorporar 3 setup en mi bshrc, uno para ros, otro para el simulador Gazebo y un ultimo para el workspace
+   ```
+   source /opt/ros/humble/setup.bash
+   source /usr/share/gazebo/setup.bash
+   source wks/install/setup.bash
+   ```
 
-3. ¿Qué comando has usado para lanzar el Kobuki en ROS 2?
+2. ¿Qué comando has usado para lanzar el Kobuki en ROS 2?
 
    Para lanzar el Kobuki en ROS 2 con el simuladopr Gazebo he usado el siguiente comando:
 
@@ -18,7 +23,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    ros2 launch kobuki simulation.launch.py
    ```
 
-5. ¿Qué nodos se lanzan? 
+3. ¿Qué nodos se lanzan? 
    
    Una vez lanzado el Kobuki, si en otra terminal escribimos:
    ```
@@ -28,7 +33,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    ![Captura desde 2024-01-28 12-13-38](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/08c93e72-dc67-4e14-b7ec-b57244925578)
 
 
-7. ¿Qué topics están disponibles? 
+4. ¿Qué topics están disponibles? 
    
    Una vez lanzado el Kobuki, si en otra terminal escribimos:
    ```
@@ -38,7 +43,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    ![Captura desde 2024-01-28 12-16-11](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/820b3aba-f40d-49b1-9de7-ae465d59c012)
 
 
-9. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
+5. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
    - **Movimiento:**
         - Topic: /cmd_vel
         - Type: geometry_msgs/msg/Twist
@@ -48,17 +53,22 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    - **Láser:**
         - Topic: /scan
         - Type: sensor_msgs/msg/LaserScan
-10. ¿Qué servicios o acciones están disponibles? 
+6. ¿Qué servicios o acciones están disponibles? 
    
-   [Respuesta]
+   Para ver los servicios usaremos el comando
+```
+ros2 service list
+```
+![Captura desde 2024-01-28 16-23-05](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/97149bab-0538-431f-a99b-a5fc20d2619d)
 
-11. Haz una diagrama del Kobuki con [drawio](https://app.diagrams.net/) similar al del robot Tiago que te muestro, cuyo fuente está en el repositorio. El diagrama debe mostrar los nodos existentes, sus conexiones y su tipo. Sube al repositorio tanto un .png como el fuente .drawio.
+
+7. Haz una diagrama del Kobuki con [drawio](https://app.diagrams.net/) similar al del robot Tiago que te muestro, cuyo fuente está en el repositorio. El diagrama debe mostrar los nodos existentes, sus conexiones y su tipo. Sube al repositorio tanto un .png como el fuente .drawio.
 ![tiago_graph](https://github.com/Docencia-fmrico/2024-P1-Kobuki/assets/3810011/a2161319-f181-4905-8fd2-2b1ed3f2151e)
   Usando [drawio](https://app.diagrams.net/) he creado el diagrama del Kobuki incluyendo nodos, topics, suscriptores y publicadores:  
   ![Captura desde 2024-01-28 15-29-35](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/b7481011-6146-439a-aac7-b86d9450573e)
 
 
-13. Trata de que el robot avance medio metro y luego gire PI/2. Indica el proceso.  
+8. Trata de que el robot avance medio metro y luego gire PI/2. Indica el proceso.  
     
    Para hacer que avance 0.5 metros en linea recta hacia delante:
 ```
