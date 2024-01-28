@@ -43,7 +43,8 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
         - Topic: /cmd_vel
         - Type: geometry_msgs/msg/Twist
    - **Bumper:**
-        - Topic: 
+        - Topic: /parameter_events
+        - Type: rcl_interfaces/msg/ParameterEvent
    - **Láser:**
         - Topic: /scan
         - Type: sensor_msgs/msg/LaserScan
