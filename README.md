@@ -57,4 +57,26 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
   ![Captura desde 2024-01-28 15-29-35](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/b7481011-6146-439a-aac7-b86d9450573e)
 
 
-13. Trata de que el robot avance medio metro y luego gire PI/2. Indica el proceso.
+13. Trata de que el robot avance medio metro y luego gire PI/2. Indica el proceso.  
+    
+   Para hacer que avance 0.5 metros en linea recta hacia delante:
+```
+ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}" && sleep 5
+```
+   Para hacer que gire pi/2:
+```
+ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}" && sleep 3
+```
+   Para que se detenga:
+```
+ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}"
+```
+   Todo junto:
+```
+ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}" && sleep 5 && ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}" && sleep 3 && ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}"
+```
+   Video demostracion en Gazebo:
+   
+
+https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/50af8638-4dc1-4c5c-9340-63ff7c853dd1
+
