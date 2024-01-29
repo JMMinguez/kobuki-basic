@@ -25,7 +25,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    Para lanzarlo en un Kobuki físico:
    ```
    ros2 launch kobuki kobuki.launch.py
-   ``
+   ```
 4. ¿Qué nodos se lanzan? 
    
    Una vez lanzado el Kobuki, si en otra terminal escribimos:
