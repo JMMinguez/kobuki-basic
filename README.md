@@ -93,9 +93,12 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
 7. Haz una diagrama del Kobuki con [drawio](https://app.diagrams.net/) similar al del robot Tiago que te muestro, cuyo fuente está en el repositorio. El diagrama debe mostrar los nodos existentes, sus conexiones y su tipo. Sube al repositorio tanto un .png como el fuente .drawio.
 ![tiago_graph](https://github.com/Docencia-fmrico/2024-P1-Kobuki/assets/3810011/a2161319-f181-4905-8fd2-2b1ed3f2151e)
   
-  Usando [drawio](https://app.diagrams.net/) he creado el diagrama del Kobuki SIMULADO EN GAZEBO incluyendo nodos, topics, suscriptores y publicadores:  
+  Usando [drawio](https://app.diagrams.net/) he creado el diagrama del Kobuki SIMULADO EN GAZEBO (ros2 launch kobuki simulation.launch.py) incluyendo nodos, topics, suscriptores y publicadores:  
     
-  ![Captura desde 2024-01-28 15-29-35](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/b7481011-6146-439a-aac7-b86d9450573e)
+  ![Captura desde 2024-01-28 15-29-35](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/b7481011-6146-439a-aac7-b86d9450573e)  
+
+  Usando [drawio](https://app.diagrams.net/) he creado el diagrama del Kobuki (ros2 launch kobuki kobuki.launch.py) incluyendo nodos, topics, suscriptores y publicadores:
+![kobuki_graph](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/53719ff4-98b8-483f-b18b-71edf3a31ddc)
 
 
 9. Trata de que el robot avance medio metro y luego gire PI/2. Indica el proceso.  
