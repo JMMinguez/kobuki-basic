@@ -22,8 +22,11 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    ```
    ros2 launch kobuki simulation.launch.py
    ```
-
-3. ¿Qué nodos se lanzan? 
+   Para lanzarlo en un Kobuki físico:
+   ```
+   ros2 launch kobuki kobuki.launch.py
+   ``
+4. ¿Qué nodos se lanzan? 
    
    Una vez lanzado el Kobuki, si en otra terminal escribimos:
    ```
@@ -33,7 +36,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    ![Captura desde 2024-01-28 12-13-38](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/08c93e72-dc67-4e14-b7ec-b57244925578)
 
 
-4. ¿Qué topics están disponibles? 
+5. ¿Qué topics están disponibles? 
    
    Una vez lanzado el Kobuki, si en otra terminal escribimos:
    ```
@@ -43,7 +46,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    ![Captura desde 2024-01-28 12-16-11](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/820b3aba-f40d-49b1-9de7-ae465d59c012)
 
 
-5. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
+6. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
    - **Movimiento:**
         - Topic: /cmd_vel
         - Type: geometry_msgs/msg/Twist
@@ -53,7 +56,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    - **Láser:**
         - Topic: /scan
         - Type: sensor_msgs/msg/LaserScan
-6. ¿Qué servicios o acciones están disponibles? 
+7. ¿Qué servicios o acciones están disponibles? 
    
    Para ver los servicios usaremos el comando
 ```
