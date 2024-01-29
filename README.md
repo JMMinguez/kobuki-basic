@@ -47,22 +47,47 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
 
 
 6. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
-   - **Movimiento:**
-        - Topic: /cmd_vel
-        - Type: geometry_msgs/msg/Twist
-   - **Bumper:**
-        - Topic: /parameter_events
-        - Type: rcl_interfaces/msg/ParameterEvent
-   - **Láser:**
-        - Topic: /scan
-        - Type: sensor_msgs/msg/LaserScan
-7. ¿Qué servicios o acciones están disponibles? 
+   Para analizar los topic usaremos el comando
+   ```
+   ros2 topic info --verbose [topic]
+   ```
    
+   - **Movimiento:**
+        - Topic: /cmd_vel  
+          ![Captura desde 2024-01-29 12-35-53](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/6b6b9a9c-2ef8-447c-b043-fe9c7ce9ef59)
+
+   - **Bumper:**
+        - Topic: /events/bumper  
+        ![Captura desde 2024-01-29 12-39-42](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/c007555e-1b03-4275-883b-3bcbed3f16d0)
+
+   - **Láser:**
+        - Topic: /scan  
+        ![Captura desde 2024-01-29 12-37-13](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/e31ca47f-89fc-4471-8a91-ad2abdc489cf)
+
+8. ¿Qué servicios o acciones están disponibles?
+     
+   Para ver los servicios y acciones disponibles podemos usar el comando
+   ```
+   ros2 interface list
+   ```
+   Servicios:  
+   ![Captura desde 2024-01-29 12-29-31](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/2d0a779e-a7a1-4d87-be2f-a16f33642850)
+
+   Acciones:  
+   ![Captura desde 2024-01-29 12-31-23](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/705dc684-a086-455f-9fd9-a98a9b0a7ab3)
+
+   Sin embargo, si queremos ver los servicios y acciones que se están ejecutando al momento:
    Para ver los servicios usaremos el comando
-```
-ros2 service list
-```
+   ```
+   ros2 service list
+   ```
 ![Captura desde 2024-01-28 16-23-05](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/97149bab-0538-431f-a99b-a5fc20d2619d)
+
+   Para ver las acciones usaremos el comando
+   ```
+   ros2 action list
+   ```
+![Captura desde 2024-01-29 12-33-33](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/617fe6bf-6a2b-4f53-a7f2-bff7fbd785f9)
 
 
 7. Haz una diagrama del Kobuki con [drawio](https://app.diagrams.net/) similar al del robot Tiago que te muestro, cuyo fuente está en el repositorio. El diagrama debe mostrar los nodos existentes, sus conexiones y su tipo. Sube al repositorio tanto un .png como el fuente .drawio.
