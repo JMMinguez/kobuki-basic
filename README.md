@@ -35,8 +35,10 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    nos aparece la lista de los nodos.  
    ![Captura desde 2024-01-30 14-16-11](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/9105fc2f-3daa-4df8-a404-9bc959147e7b)
 
+   Sin embargo si al lanzar el kobuki añadimos lidar:=True, aparecera un nodo mas: /scan_to_scan_filter_chain
 
-5. ¿Qué topics están disponibles? 
+
+6. ¿Qué topics están disponibles? 
    
    Una vez lanzado el Kobuki, si en otra terminal escribimos:
    ```
@@ -45,7 +47,9 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    nos aparece la lista de los topic.  
    ![Captura desde 2024-01-30 14-14-51](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/e9ab1634-d488-4deb-9029-2fae1b519fc2)
 
-6. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
+   Sin embargo si la lanzar el kobuki añadimos lidar:=True, aparecen 2 topic mas: /scan y scan_filtered
+
+8. Analiza los topics (tipo, QoS y explicación de campos) que permiten hacer al robot moverse, detectar obstáculos con el bumper y recibir la información del láser.
    Para analizar los topic usaremos el comando
    ```
    ros2 topic info --verbose [topic]
@@ -63,7 +67,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
         - Topic: /scan  
         ![Captura desde 2024-01-29 12-37-13](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/e31ca47f-89fc-4471-8a91-ad2abdc489cf)
 
-8. ¿Qué servicios o acciones están disponibles?
+9. ¿Qué servicios o acciones están disponibles?
    Para ver los servicios usaremos el comando
    ```
    ros2 service list
