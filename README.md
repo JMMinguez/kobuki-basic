@@ -35,7 +35,7 @@ Debes completar el siguiente cuestionario para realizar la práctica. Incluye lo
    nos aparece la lista de los nodos.  
    ![Captura desde 2024-01-30 14-16-11](https://github.com/Docencia-fmrico/2024-p1-kobuki-jmartinm2021/assets/92941332/9105fc2f-3daa-4df8-a404-9bc959147e7b)
 
-   Sin embargo si al lanzar el kobuki añadimos lidar:=True, aparecera un nodo mas: /scan_to_scan_filter_chain
+   Sin embargo si al lanzar el kobuki añadimos lidar:=True y esta conectado el laser, apareceran 2 nodo mas: /scan_to_scan_filter_chain y /rplidar_node
 
 
 6. ¿Qué topics están disponibles? 
